@@ -1,0 +1,44 @@
+maintainer: Mohamed Amine Dhiab
+
+device: cuda #device on which you want to train the data, use cpu if no nvidia cuda driver is available.
+
+run_name: first_run #name of the run that would be used for wandb
+
+job_type: first_job #name of the job that would be used for wandb
+
+img_dir: ./data/image # directory to image data
+
+mask_dir: ./data/image_mask # directory to image masks
+
+label_dir: ./data/labels # directory to image labels
+
+pipeline:
+    - name: process # process pipe used to prepare the data
+      train_fraction: 0.75 # proportion of the data to be used for training
+      validation_fraction: 0.15 # proportion of the data to be used for validation
+      is_augment: true # augmentation will be executed if this is true
+    - name: train # train pipe used to training the model
+      train_cfg:
+          with_augmentation: true # if set to true, data in the '.../augmented' folder will be used for training
+          img_size: (384,384)
+          epochs: 10
+          batch_size: 8
+          learning_rate: 0.0003
+          lr_decay: 0.1
+          lamda: 1
+          optimizer: adam
+          save_path: ./weights/model_weights.pth
+    - name: test # test pipe used to run inference
+      test_data: ./data/test.tsv
+      test_cfg:
+          img_size: (384,384)
+          batch_size: 8
+          weights: ./weights/model_weights.pth
+
+with_wandb: false # set this to true if you want to use wandb
+
+multi_gpus: false # not supported yet
+
+model_cfg: vit_hd1.yml #the model configuration that would be used, check the possible configurations in the folders /models
+
+random_seed: 2022

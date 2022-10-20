@@ -1,0 +1,33 @@
+image,mask,class,class_nr
+image_1.jpg,mask_1.jpg,Tubus - dys,2
+image_10.jpg,mask_10.jpg,Tubus - phys. - laengs,0
+image_11.jpg,mask_11.jpg,Tubus - phys. - schraeg,1
+image_12.jpg,mask_12.jpg,Tubus - dys,2
+image_13.jpg,mask_13.jpg,Tubus - dys,2
+image_14.jpg,mask_14.jpg,Tubus - dys,2
+image_15.jpg,mask_15.jpg,Tubus - dys,2
+image_16.jpg,mask_16.jpg,Tubus - dys,2
+image_17.jpg,mask_17.jpg,Tubus - phys. - schraeg,1
+image_18.jpg,mask_18.jpg,Tubus - dys,2
+image_19.jpg,mask_19.jpg,Tubus - phys. - schraeg,1
+image_2.jpg,mask_2.jpg,Tubus - dys,2
+image_20.jpg,mask_20.jpg,Tubus - phys. - schraeg,1
+image_21.jpg,mask_21.jpg,Tubus - phys. - schraeg,1
+image_22.jpg,mask_22.jpg,Tubus - phys. - laengs,0
+image_23.jpg,mask_23.jpg,Tubus - dys,2
+image_24.jpg,mask_24.jpg,Tubus - dys,2
+image_25.jpg,mask_25.jpg,Tubus - dys,2
+image_26.jpg,mask_26.jpg,Tubus - dys,2
+image_27.jpg,mask_27.jpg,Tubus - phys. - schraeg,1
+image_28.jpg,mask_28.jpg,Tubus - dys,2
+image_29.jpg,mask_29.jpg,Tubus - phys. - schraeg,1
+image_3.jpg,mask_3.jpg,Tubus - dys,2
+image_30.jpg,mask_30.jpg,Tubus - phys. - schraeg,1
+image_31.jpg,mask_31.jpg,Tubus - phys. - schraeg,1
+image_32.jpg,mask_32.jpg,Tubus - phys. - quer,3
+image_4.jpg,mask_4.jpg,Tubus - phys. - laengs,0
+image_5.jpg,mask_5.jpg,Tubus - phys. - quer,3
+image_6.jpg,mask_6.jpg,Tubus - phys. - quer,3
+image_7.jpg,mask_7.jpg,Tubus - phys. - quer,3
+image_8.jpg,mask_8.jpg,Tubus - phys. - quer,3
+image_9.jpg,mask_9.jpg,Tubus - phys. - laengs,0

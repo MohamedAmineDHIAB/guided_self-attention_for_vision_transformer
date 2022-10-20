@@ -1,0 +1,235 @@
+2022-09-01 14:47:26,652 INFO    MainThread:18016 [internal.py:wandb_internal():92] W&B internal server running at pid: 18016, started at: 2022-09-01 14:47:26.651992
+2022-09-01 14:47:26,653 INFO    WriterThread:18016 [datastore.py:open_for_write():77] open: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/run-3ky7gggl.wandb
+2022-09-01 14:47:26,654 DEBUG   SenderThread:18016 [sender.py:send():235] send: header
+2022-09-01 14:47:26,654 DEBUG   SenderThread:18016 [sender.py:send():235] send: run
+2022-09-01 14:47:26,843 INFO    SenderThread:18016 [dir_watcher.py:__init__():169] watching files in: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files
+2022-09-01 14:47:26,844 INFO    SenderThread:18016 [sender.py:_start_run_threads():812] run started: 3ky7gggl with start time 1662036445
+2022-09-01 14:47:26,844 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:26,844 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: check_version
+2022-09-01 14:47:26,844 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:26,844 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: check_version
+2022-09-01 14:47:26,926 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: run_start
+2022-09-01 14:47:27,845 DEBUG   HandlerThread:18016 [meta.py:__init__():37] meta init
+2022-09-01 14:47:27,845 DEBUG   HandlerThread:18016 [meta.py:__init__():51] meta init done
+2022-09-01 14:47:27,845 DEBUG   HandlerThread:18016 [meta.py:probe():211] probe
+2022-09-01 14:47:27,846 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:27,852 DEBUG   HandlerThread:18016 [meta.py:_setup_git():201] setup git
+2022-09-01 14:47:27,871 DEBUG   HandlerThread:18016 [meta.py:_setup_git():208] setup git done
+2022-09-01 14:47:27,871 DEBUG   HandlerThread:18016 [meta.py:_save_pip():55] save pip
+2022-09-01 14:47:27,872 DEBUG   HandlerThread:18016 [meta.py:_save_pip():69] save pip done
+2022-09-01 14:47:27,872 DEBUG   HandlerThread:18016 [meta.py:_save_conda():76] save conda
+2022-09-01 14:47:28,846 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/conda-environment.yaml
+2022-09-01 14:47:28,847 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/requirements.txt
+2022-09-01 14:47:31,838 DEBUG   HandlerThread:18016 [meta.py:_save_conda():86] save conda done
+2022-09-01 14:47:31,838 DEBUG   HandlerThread:18016 [meta.py:probe():249] probe done
+2022-09-01 14:47:31,840 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:31,840 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-09-01 14:47:31,846 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: stop_status
+2022-09-01 14:47:31,846 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: stop_status
+2022-09-01 14:47:31,849 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/conda-environment.yaml
+2022-09-01 14:47:31,849 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:31,850 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-metadata.json
+2022-09-01 14:47:32,003 DEBUG   SenderThread:18016 [sender.py:send():235] send: telemetry
+2022-09-01 14:47:32,387 INFO    Thread-11 :18016 [upload_job.py:push():137] Uploaded file /tmp/tmpnggikpzuwandb/zbfpgi0u-wandb-metadata.json
+2022-09-01 14:47:33,851 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:34,750 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:35,124 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:35,125 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:35,126 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:35,126 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:35,305 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:35,663 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:35,664 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:35,665 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:35,665 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:35,849 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:35,852 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:36,246 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:36,246 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:36,246 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:36,247 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:36,416 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:36,763 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:36,763 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:36,763 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:36,764 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:36,852 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:36,852 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:36,944 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:37,291 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:37,292 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:37,292 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:37,293 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:37,468 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:37,511 DEBUG   SenderThread:18016 [sender.py:send():235] send: telemetry
+2022-09-01 14:47:37,512 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:37,512 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file weights/model_vit_dino_dev.pth with policy live
+2022-09-01 14:47:37,853 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:37,853 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/weights/model_vit_dino_dev.pth
+2022-09-01 14:47:37,853 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/weights
+2022-09-01 14:47:37,886 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:37,886 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:37,886 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file media/images/image_25.jpg_125_71b1d754ead79f3e1d91.png with policy now
+2022-09-01 14:47:37,886 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:37,887 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:37,887 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:38,134 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:38,135 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file media/images/image_14.jpg_126_de48bfd7da45df3190d6.png with policy now
+2022-09-01 14:47:38,135 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:38,136 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:38,136 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:38,137 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:38,366 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:38,367 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file media/images/image_20.jpg_127_cf9eafdd3a3d344087b3.png with policy now
+2022-09-01 14:47:38,367 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:38,368 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:38,368 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:38,369 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:38,652 INFO    Thread-13 :18016 [upload_job.py:push():137] Uploaded file /tmp/tmpnggikpzuwandb/hfplklc5-media/images/image_25.jpg_125_71b1d754ead79f3e1d91.png
+2022-09-01 14:47:38,692 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:38,692 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:38,692 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file media/images/image_3.jpg_128_43827ae84726f67b6923.png with policy now
+2022-09-01 14:47:38,694 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:38,694 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:38,694 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:38,721 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: partial_history
+2022-09-01 14:47:38,722 DEBUG   SenderThread:18016 [sender.py:send():235] send: history
+2022-09-01 14:47:38,722 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:38,723 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:38,853 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:38,853 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:38,854 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_3.jpg_128_43827ae84726f67b6923.png
+2022-09-01 14:47:38,854 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_20.jpg_127_cf9eafdd3a3d344087b3.png
+2022-09-01 14:47:38,854 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_25.jpg_125_71b1d754ead79f3e1d91.png
+2022-09-01 14:47:38,854 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_14.jpg_126_de48bfd7da45df3190d6.png
+2022-09-01 14:47:38,854 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media
+2022-09-01 14:47:38,854 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_created():217] file/dir created: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images
+2022-09-01 14:47:38,890 INFO    Thread-14 :18016 [upload_job.py:push():137] Uploaded file /tmp/tmpnggikpzuwandb/wmwi3irv-media/images/image_14.jpg_126_de48bfd7da45df3190d6.png
+2022-09-01 14:47:39,037 INFO    Thread-12 :18016 [upload_job.py:push():137] Uploaded file /tmp/tmpnggikpzuwandb/2jckyg5i-weights/model_vit_dino_dev.pth
+2022-09-01 14:47:39,121 INFO    Thread-15 :18016 [upload_job.py:push():137] Uploaded file /tmp/tmpnggikpzuwandb/wb2zny8d-media/images/image_20.jpg_127_cf9eafdd3a3d344087b3.png
+2022-09-01 14:47:39,430 INFO    Thread-16 :18016 [upload_job.py:push():137] Uploaded file /tmp/tmpnggikpzuwandb/2xflzwmu-media/images/image_3.jpg_128_43827ae84726f67b6923.png
+2022-09-01 14:47:39,723 DEBUG   SenderThread:18016 [sender.py:send():235] send: files
+2022-09-01 14:47:39,723 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file weights/model_vit_dino_dev.pth with policy live
+2022-09-01 14:47:39,723 DEBUG   SenderThread:18016 [sender.py:send():235] send: telemetry
+2022-09-01 14:47:39,723 DEBUG   SenderThread:18016 [sender.py:send():235] send: telemetry
+2022-09-01 14:47:40,855 INFO    Thread-7  :18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:41,901 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:41,902 DEBUG   SenderThread:18016 [sender.py:send():235] send: exit
+2022-09-01 14:47:41,902 INFO    SenderThread:18016 [sender.py:send_exit():371] handling exit code: 0
+2022-09-01 14:47:41,902 INFO    SenderThread:18016 [sender.py:send_exit():373] handling runtime: 14
+2022-09-01 14:47:41,904 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:41,904 INFO    SenderThread:18016 [sender.py:send_exit():379] send defer
+2022-09-01 14:47:41,905 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:41,905 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:41,905 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 0
+2022-09-01 14:47:41,906 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:41,906 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-09-01 14:47:41,906 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 1
+2022-09-01 14:47:41,906 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:41,906 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 1
+2022-09-01 14:47:41,978 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:41,978 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-09-01 14:47:41,978 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 2
+2022-09-01 14:47:41,978 DEBUG   SenderThread:18016 [sender.py:send():235] send: stats
+2022-09-01 14:47:41,978 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:41,979 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 2
+2022-09-01 14:47:41,979 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:41,979 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-09-01 14:47:41,979 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 3
+2022-09-01 14:47:41,979 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:41,979 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 3
+2022-09-01 14:47:41,979 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:41,979 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-09-01 14:47:41,979 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 4
+2022-09-01 14:47:41,979 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:41,979 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 4
+2022-09-01 14:47:41,980 DEBUG   SenderThread:18016 [sender.py:send():235] send: summary
+2022-09-01 14:47:41,980 INFO    SenderThread:18016 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-09-01 14:47:41,980 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:41,980 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-09-01 14:47:41,980 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 5
+2022-09-01 14:47:41,981 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:41,981 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 5
+2022-09-01 14:47:41,981 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:41,981 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-09-01 14:47:42,006 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:42,170 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 6
+2022-09-01 14:47:42,170 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:42,171 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:42,172 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 6
+2022-09-01 14:47:42,172 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:42,172 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-09-01 14:47:42,173 INFO    SenderThread:18016 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-09-01 14:47:42,273 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:42,857 INFO    SenderThread:18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:42,858 INFO    SenderThread:18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:42,858 INFO    SenderThread:18016 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/config.yaml
+2022-09-01 14:47:42,860 INFO    SenderThread:18016 [dir_watcher.py:finish():313] scan: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files
+2022-09-01 14:47:42,860 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/config.yaml config.yaml
+2022-09-01 14:47:42,861 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json wandb-summary.json
+2022-09-01 14:47:42,862 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/requirements.txt requirements.txt
+2022-09-01 14:47:42,862 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/conda-environment.yaml conda-environment.yaml
+2022-09-01 14:47:42,870 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-metadata.json wandb-metadata.json
+2022-09-01 14:47:42,871 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log output.log
+2022-09-01 14:47:42,898 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/weights/model_vit_dino_dev.pth weights/model_vit_dino_dev.pth
+2022-09-01 14:47:42,914 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_25.jpg_125_71b1d754ead79f3e1d91.png media/images/image_25.jpg_125_71b1d754ead79f3e1d91.png
+2022-09-01 14:47:42,916 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_14.jpg_126_de48bfd7da45df3190d6.png media/images/image_14.jpg_126_de48bfd7da45df3190d6.png
+2022-09-01 14:47:42,916 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_20.jpg_127_cf9eafdd3a3d344087b3.png media/images/image_20.jpg_127_cf9eafdd3a3d344087b3.png
+2022-09-01 14:47:42,917 INFO    SenderThread:18016 [dir_watcher.py:finish():327] scan save: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/media/images/image_3.jpg_128_43827ae84726f67b6923.png media/images/image_3.jpg_128_43827ae84726f67b6923.png
+2022-09-01 14:47:42,917 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 7
+2022-09-01 14:47:42,917 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:42,919 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:42,919 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 7
+2022-09-01 14:47:42,919 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:42,920 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-09-01 14:47:42,920 INFO    SenderThread:18016 [file_pusher.py:finish():145] shutting down file pusher
+2022-09-01 14:47:43,021 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,021 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,141 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,142 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,248 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,249 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,352 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,352 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,455 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,456 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,504 INFO    Thread-17 :18016 [upload_job.py:push():137] Uploaded file /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/config.yaml
+2022-09-01 14:47:43,509 INFO    Thread-18 :18016 [upload_job.py:push():137] Uploaded file /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/wandb-summary.json
+2022-09-01 14:47:43,513 INFO    Thread-19 :18016 [upload_job.py:push():137] Uploaded file /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/requirements.txt
+2022-09-01 14:47:43,527 INFO    Thread-20 :18016 [upload_job.py:push():137] Uploaded file /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/conda-environment.yaml
+2022-09-01 14:47:43,549 INFO    Thread-21 :18016 [upload_job.py:push():137] Uploaded file /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/files/output.log
+2022-09-01 14:47:43,559 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,559 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,662 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:43,663 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:43,750 INFO    Thread-6  :18016 [sender.py:transition_state():392] send defer: 8
+2022-09-01 14:47:43,751 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:43,752 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 8
+2022-09-01 14:47:43,752 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:43,752 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-09-01 14:47:43,766 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:44,216 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 9
+2022-09-01 14:47:44,216 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:44,217 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:44,217 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 9
+2022-09-01 14:47:44,217 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:44,217 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-09-01 14:47:44,217 INFO    SenderThread:18016 [sender.py:transition_state():392] send defer: 10
+2022-09-01 14:47:44,218 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: defer
+2022-09-01 14:47:44,218 INFO    HandlerThread:18016 [handler.py:handle_request_defer():164] handle defer: 10
+2022-09-01 14:47:44,218 DEBUG   SenderThread:18016 [sender.py:send():235] send: final
+2022-09-01 14:47:44,218 DEBUG   SenderThread:18016 [sender.py:send():235] send: footer
+2022-09-01 14:47:44,218 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: defer
+2022-09-01 14:47:44,218 INFO    SenderThread:18016 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-09-01 14:47:44,318 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: poll_exit
+2022-09-01 14:47:44,318 DEBUG   SenderThread:18016 [sender.py:send_request():249] send_request: poll_exit
+2022-09-01 14:47:44,318 INFO    SenderThread:18016 [file_pusher.py:join():150] waiting for file pusher
+2022-09-01 14:47:44,732 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: sampled_history
+2022-09-01 14:47:44,733 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: get_summary
+2022-09-01 14:47:44,733 DEBUG   HandlerThread:18016 [handler.py:handle_request():141] handle_request: shutdown
+2022-09-01 14:47:44,734 INFO    HandlerThread:18016 [handler.py:finish():790] shutting down handler
+2022-09-01 14:47:45,218 INFO    WriterThread:18016 [datastore.py:close():281] close: /home/dhiab/Desktop/files/dai/guided-soft-attention/wandb/run-20220901_144725-3ky7gggl/run-3ky7gggl.wandb
+2022-09-01 14:47:45,631 INFO    SenderThread:18016 [sender.py:finish():1107] shutting down sender
+2022-09-01 14:47:45,631 INFO    SenderThread:18016 [file_pusher.py:finish():145] shutting down file pusher
+2022-09-01 14:47:45,631 INFO    SenderThread:18016 [file_pusher.py:join():150] waiting for file pusher
+2022-09-01 14:47:45,675 INFO    MainThread:18016 [internal.py:handle_exit():82] Internal process exited

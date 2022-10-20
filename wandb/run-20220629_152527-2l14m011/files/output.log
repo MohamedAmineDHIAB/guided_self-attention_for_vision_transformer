@@ -1,0 +1,16 @@
+1/2  preparing the dataset ...
+dataset is of length : 32
+trainset is of length : 28
+testset is of length : 4
+2/2  testing the model ...
+['Tubus - dys', 'Tubus - phys. - laengs', 'Tubus - phys. - quer', 'Tubus - phys. - schraeg']
+<built-in method size of Tensor object at 0x7f745c58aa40>
+./data/processed/GRAZ/image_mask/mask_14.jpg
+<built-in method size of Tensor object at 0x7f745c58ac20>
+./data/processed/GRAZ/image_mask/mask_3.jpg
+<built-in method size of Tensor object at 0x7f745c58a9a0>
+./data/processed/GRAZ/image_mask/mask_25.jpg
+<built-in method size of Tensor object at 0x7f745c58a900>
+./data/processed/GRAZ/image_mask/mask_20.jpg
+===> Running inference on the total of 4 test images:    Accuracy : 50.0% || IoU : 0.0583
+===> Picking 5 random test image(s) and saving corresponding inference results in reports/figures

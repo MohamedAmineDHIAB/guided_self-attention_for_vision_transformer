@@ -1,0 +1,27 @@
+{
+    "os": "Linux-5.15.0-46-generic-x86_64-with-glibc2.10",
+    "python": "3.8.8",
+    "heartbeatAt": "2022-09-01T11:46:39.381169",
+    "startedAt": "2022-09-01T11:46:37.372488",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--cfg",
+        "cfg.yml"
+    ],
+    "state": "running",
+    "program": "pipeline.py",
+    "codePath": "pipeline.py",
+    "git": {
+        "remote": "git@gitlab.dai-labor.de:empaia/guided-soft-attention.git",
+        "commit": "62d0642966723c61c2713ffab5f4e7bdc360dbf0"
+    },
+    "email": "mohamedamine.dhiab@dai-labor.de",
+    "root": "/home/dhiab/Desktop/files/dai/guided-soft-attention",
+    "host": "dhiab-ROG-Strix-G531GV-G531GV",
+    "username": "dhiab",
+    "executable": "/home/dhiab/anaconda3/bin/python3"
+}

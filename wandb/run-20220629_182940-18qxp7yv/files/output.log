@@ -1,0 +1,8 @@
+1/2  preparing the dataset ...
+dataset is of length : 32
+trainset is of length : 28
+testset is of length : 4
+2/2  testing the model ...
+['Tubus - dys', 'Tubus - phys. - laengs', 'Tubus - phys. - quer', 'Tubus - phys. - schraeg']
+===> Running inference on the total of 4 test images:    Accuracy : 50.0% || IoU : 0.0583
+===> Picking 5 random test image(s) and saving corresponding inference results in ./reports/figures

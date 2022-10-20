@@ -1,0 +1,50 @@
+1/3  preparing the dataset ...
+Dataset is of length : 32
+Train set is of length : 25
+Validation set is of length : 3
+Test set is of length : 4
+2/3  training the model ...
+Validation results before training : Total Loss :2.01, Dice Loss :0.326, Cross-entropy Loss :0.343, IoU:0.0786, Accuracy:1.0
+5
+10
+15
+20
+25
+===> Epoch 1/5  Train results:  Dice Loss : 0.969 || Cross-entropy Loss : 1.527 || IoU : 0.222
+===> Epoch 1/5  Validation results:  Dice Loss : 0.325 || Cross-entropy Loss : 0.359 || IoU : 0.079
+30
+35
+40
+45
+50
+===> Epoch 2/5  Train results:  Dice Loss : 0.945 || Cross-entropy Loss : 1.353 || IoU : 0.222
+===> Epoch 2/5  Validation results:  Dice Loss : 0.323 || Cross-entropy Loss : 0.359 || IoU : 0.079
+Epoch 1/5  : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 12.48it/s]
+Epoch 2/5  : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 12.65it/s]
+Epoch 3/5  :   0%|                                                                                                               | 0/5 [00:00<?, ?it/s]
+55
+60
+65
+70
+75
+===> Epoch 3/5  Train results:  Dice Loss : 0.908 || Cross-entropy Loss : 1.331 || IoU : 0.222
+===> Epoch 3/5  Validation results:  Dice Loss : 0.320 || Cross-entropy Loss : 0.359 || IoU : 0.079
+80
+85
+90
+95
+100
+===> Epoch 4/5  Train results:  Dice Loss : 0.877 || Cross-entropy Loss : 1.338 || IoU : 0.230
+===> Epoch 4/5  Validation results:  Dice Loss : 0.317 || Cross-entropy Loss : 0.409 || IoU : 0.079
+105
+110
+115
+120
+Epoch 3/5  : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 11.72it/s]
+Epoch 4/5  : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 13.34it/s]
+Epoch 5/5  : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 13.37it/s]
+===> Epoch 5/5  Train results:  Dice Loss : 0.849 || Cross-entropy Loss : 1.327 || IoU : 0.230
+===> Epoch 5/5  Validation results:  Dice Loss : 0.315 || Cross-entropy Loss : 0.457 || IoU : 0.079
+3/3  testing the model ...
+===> Running inference on the total of 4 test images:    Accuracy : 0.0% || IoU : 0.198
+===> Picking 4 random test image(s) and saving corresponding inference results in ./reports/figures

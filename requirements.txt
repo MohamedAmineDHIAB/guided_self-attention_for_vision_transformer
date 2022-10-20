@@ -1,0 +1,24 @@
+# GuSA requirements
+# Usage: pip install -r requirements.txt
+
+# Augmentation -------------------------------
+albumentations>=1.1.0
+
+
+# Base ---------------------------------------
+numpy>=1.21.1
+Pillow>=9.0.1
+PyYAML>=6.0
+torchmetrics>=0.8.2
+torchvision>=0.12.0
+
+# Plotting ------------------------------------
+matplotlib>=3.3.4
+pandas>=1.2.4
+seaborn>=0.11.1
+
+# Logging -------------------------------------
+wandb
+
+# Extra ---------------------------------------
+tqdm>=4.59.0

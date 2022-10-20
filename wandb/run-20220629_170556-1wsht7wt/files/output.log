@@ -1,0 +1,8 @@
+1/2  preparing the dataset ...
+dataset is of length : 32
+trainset is of length : 28
+testset is of length : 4
+2/2  testing the model ...
+['Tubus - dys', 'Tubus - phys. - laengs', 'Tubus - phys. - quer', 'Tubus - phys. - schraeg']
+torch.Size([3, 1024, 1024])
+torch.Size([1, 1, 64, 64])

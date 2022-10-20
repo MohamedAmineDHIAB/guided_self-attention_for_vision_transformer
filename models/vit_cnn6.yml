@@ -1,0 +1,5 @@
+backbone_name: vit_base
+pretraining_method: dino
+patch_size: 8
+freeze_backbone: true
+n_features: 6 # value must be between 1 and 12
