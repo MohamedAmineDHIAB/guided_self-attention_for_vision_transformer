@@ -2,3 +2,9 @@ weights/*
 __pycache__
 /configs/cfg*
 wandb
+/data/augmented
+/data/image/*
+/data/image_mask/*
+/data/labels/*
+*.zip
+/reports/figures/*.jpg

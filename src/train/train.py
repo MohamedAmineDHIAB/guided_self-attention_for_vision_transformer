@@ -21,7 +21,7 @@ def train(device,with_wandb,model, train_loader,validation_loader, loss_cl,loss_
     # Save the model in pth format
     torch.save(model.state_dict(), config['save_path'])
     for epoch in range(epochs):
-        if early_stop < 5 :
+        if early_stop < 20 :
             for _, batch_dict in enumerate(tqdm(train_loader,leave=True,desc=f'Epoch {epoch+1}/{epochs}  ')):
                 images,masks, labels=batch_dict["image_tensor"],batch_dict["mask_tensor"],batch_dict['label']
 

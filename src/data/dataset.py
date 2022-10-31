@@ -48,5 +48,5 @@ class GuSADataset(Dataset):
 def make_loader(dataset:GuSADataset, batch_size=4):
     loader = DataLoader(dataset=dataset,
                                          batch_size=batch_size,
-                                         pin_memory=True, num_workers=2)
+                                         pin_memory=True, num_workers=2,shuffle=True)
     return loader
