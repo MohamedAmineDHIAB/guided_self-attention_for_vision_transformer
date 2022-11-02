@@ -25,7 +25,7 @@ from src.inference.test import test
 from src.models.densenet_gusa import DenseNetGuSA
 from src.models.vit_gusa import ViTGuSA
 from src.models.vit_cnn_gusa import ViT_CNN_GuSA
-
+from src.data.preprocess import preprocess
 from src.train.train import train
 from utils.dice_loss import DiceLoss
 from utils.iou import IoU
@@ -69,35 +69,58 @@ def parse_arguments():
     args = parser.parse_args()
     CONFIG_FILE=args.cfg
 
-def process_pipe(idx,train_fraction,validation_fraction,is_augment):
-
+def process_pipe(idx,train_fraction,validation_fraction,is_augment,preprocess_cfg):
+    # taking the main directory containing the images, example: /data/raw
+    DATA_DIR=os.path.dirname(IMG_DIR)
     # Making the data
     print(f'\n{idx+1}/{PIPELINE_LEN}  preparing the dataset ...\n')
     main_df=create_table( LABEL_DIR,IMG_DIR,MASK_DIR)
     print(f'Dataset is of length : {len(main_df)}\n')
-    # Creating train, val and test dataframes
-    train_df=main_df.sample(frac=train_fraction,random_state=RANDOM_SEED)
-    val_df=pd.concat([main_df, train_df]).drop_duplicates(keep=False).sample(frac=validation_fraction/(1-train_fraction),random_state=RANDOM_SEED)
-    test_df=pd.concat([main_df, train_df,val_df]).drop_duplicates(keep=False)
-    # Saving dataframes
-    train_df.to_csv(os.path.dirname(IMG_DIR)+'/train.tsv',index=False)
-    val_df.to_csv(os.path.dirname(IMG_DIR)+'/val.tsv',index=False)
-    test_df.to_csv(os.path.dirname(IMG_DIR)+'/test.tsv',index=False)
+
+    IMG_TO_AUGMENT_DIR=IMG_DIR
+    MASK_TO_AUGMENT_DIR=MASK_DIR
+    if preprocess_cfg:
+        preprocess(preprocess_cfg,IMG_DIR,MASK_DIR,main_df,train_fraction,validation_fraction,RANDOM_SEED)
+        # defining the directory for the preprocessed images to be augmented 
+        IMG_TO_AUGMENT_DIR=os.path.join(DATA_DIR,'../preprocessed/image')
+        # normalizing the directory path
+        IMG_TO_AUGMENT_DIR=os.path.normpath(IMG_TO_AUGMENT_DIR)
+        # defining the directory for the preprocessed masks to be augmented 
+        MASK_TO_AUGMENT_DIR=os.path.join(DATA_DIR,'../preprocessed/image_mask')
+        # normalizing the directory path
+        MASK_TO_AUGMENT_DIR=os.path.normpath(MASK_TO_AUGMENT_DIR)
+        print(preprocess_cfg)
+    else :
+        # Creating train, val and test dataframes without preprocessing
+        train_df=main_df.sample(frac=train_fraction,random_state=RANDOM_SEED)
+        if train_fraction < 1:
+            val_df=pd.concat([main_df, train_df]).drop_duplicates(keep=False).sample(frac=validation_fraction/(1-train_fraction),random_state=RANDOM_SEED)
+            test_df=pd.concat([main_df, train_df,val_df]).drop_duplicates(keep=False)
+        else :
+            val_df=pd.DataFrame([],columns=train_df.columns)
+            test_df=pd.DataFrame([],columns=train_df.columns)
+
+        # Saving dataframes
+        train_df.to_csv(DATA_DIR+'/train.tsv',index=False)
+        val_df.to_csv(DATA_DIR+'/val.tsv',index=False)
+        test_df.to_csv(DATA_DIR+'/test.tsv',index=False)
+    exit()
+
     if is_augment :
-        augment(IMG_DIR,
-                MASK_DIR,
-                os.path.dirname(IMG_DIR)+'/train.tsv')
+        augment(IMG_TO_AUGMENT_DIR,
+                MASK_TO_AUGMENT_DIR,
+                os.path.dirname(IMG_TO_AUGMENT_DIR)+'/train.tsv')
 
-        train_df=create_table( os.path.join(os.path.dirname(IMG_DIR), 'augmented/labels'),
-                     os.path.join(os.path.dirname(IMG_DIR), 'augmented/image'),
-                     os.path.join(os.path.dirname(IMG_DIR), 'augmented/image_mask'),table_name='train.tsv')
+        train_df_aug=create_table( os.path.join(DATA_DIR, '../augmented/labels'),
+                     os.path.join(DATA_DIR, '../augmented/image'),
+                     os.path.join(DATA_DIR, '../augmented/image_mask'),table_name='train.tsv')
+    else : 
+        train_df_aug=train_df
 
 
-
-    print(f'\nTrain set is of length : {len(train_df)}\n')
+    print(f'\nTrain set is of length : {len(train_df_aug)}\n')
     print(f'Validation set is of length : {len(val_df)}\n')
     print(f'Test set is of length : {len(test_df)}\n')
-
     return()
 
 def train_pipe(idx,train_cfg):
@@ -203,8 +226,9 @@ def browse_pipeline():
                 if pipe['name']=='process':
                     train_fraction=pipe['train_fraction']
                     validation_fraction=pipe['validation_fraction']
+                    preprocess_cfg=pipe.get('preprocess')
                     is_augment=pipe['is_augment']
-                    process_pipe(i,train_fraction,validation_fraction,is_augment)
+                    process_pipe(i,train_fraction,validation_fraction,is_augment,preprocess_cfg)
                 elif pipe['name']=='train':
 
                     train_pipe(idx=i,train_cfg=pipe['train_cfg'])

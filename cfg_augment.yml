@@ -6,25 +6,21 @@ run_name: augment
 
 job_type: augment
 
-img_dir: ./data/image # directory to image data
+img_dir: ./data/raw/image # directory to image data
 
-mask_dir: ./data/image_mask # directory to image masks
+mask_dir: ./data/raw/image_mask # directory to image masks
 
-label_dir: ./data/labels # directory to image labels
+label_dir: ./data/raw/labels # directory to image labels
 
 pipeline:
     - name: process # process pipe used to prepare the data
-      train_fraction: 1 # proportion of the data to be used for training
-      validation_fraction: 0 # proportion of the data to be used for validation
+      train_fraction: 0.5 # proportion of the data to be used for training
+      validation_fraction: 0.1 # proportion of the data to be used for validation
       preprocess : 
-        apply: true
-        crop : # crop your data to create square images and augment it using the result, you need to know the minimum height / width
-          apply: true
-          center : random
+        crop : # crop your data to create square images using the result, you need to know the minimum height / width
+          type : all # cut the whole image into smaller cropped images of size (height x width)
           height : 430
-        resize :
-          apply : true
-
+          width : 430
       is_augment: true # augmentation will be executed if this is true
     # - name: train # train pipe used to training the model
     #   train_cfg:
@@ -45,7 +41,7 @@ pipeline:
     #       batch_size: 2
     #       weights: ./weights/model_densenet_1.pth
 
-with_wandb: true
+with_wandb: false
 
 multi_gpus: false # not supported yet
 

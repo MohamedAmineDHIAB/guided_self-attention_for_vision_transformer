@@ -61,15 +61,16 @@ def augment(
 
     print('Augmenting the training dataset...\n')
     # create augmentation directory
-    augmented_directory =os.path.join(os.path.dirname(images_directory), 'augmented')
-    os.mkdir(augmented_directory)
+    augmented_directory =os.path.join(os.path.dirname(images_directory), '../augmented')
+    os.makedirs(augmented_directory,exist_ok=True)
+
     # Creating directories of augmented images, masks and their corresponding labels
     aug_img_dir= os.path.join(augmented_directory, 'image')
     aug_mask_dir= os.path.join(augmented_directory, 'image_mask')
     aug_labels_dir= os.path.join(augmented_directory, 'labels')
-    os.mkdir(aug_img_dir)
-    os.mkdir(aug_mask_dir)
-    os.mkdir(aug_labels_dir)
+    os.makedirs(aug_img_dir,exist_ok=True)
+    os.makedirs(aug_mask_dir,exist_ok=True)
+    os.makedirs(aug_labels_dir,exist_ok=True)
     # importing dataframe to be augmented
     df=pd.read_csv(data_file)
     # define array containing random transformation indexes for dominant class

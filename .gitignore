@@ -3,7 +3,7 @@ __pycache__
 /configs/cfg*
 wandb
 /data/augmented
-/data/processed
+/data/preprocessed
 /data/raw/image/*
 /data/raw/image_mask/*
 /data/raw/labels/*
