@@ -3,8 +3,9 @@ __pycache__
 /configs/cfg*
 wandb
 /data/augmented
-/data/image/*
-/data/image_mask/*
-/data/labels/*
+/data/processed
+/data/raw/image/*
+/data/raw/image_mask/*
+/data/raw/labels/*
 *.zip
 /reports/figures/*.jpg

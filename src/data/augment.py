@@ -81,10 +81,10 @@ def augment(
         transformations = [
                 A.Compose([
                 ]),A.Compose([
-                        A.ShiftScaleRotate(shift_limit=0.1, scale_limit=-1, rotate_limit=0, p=1),
                         A.RandomCrop(height=224, width=224,p=1),
                 ]),A.Compose([
                         A.HorizontalFlip(p=1),
+                ]),A.Compose([
                         A.CLAHE(p=1),
                 ]),A.Compose([
                         A.MultiplicativeNoise(multiplier=[0.25, 1.5], elementwise=True, per_channel=True, p=1)

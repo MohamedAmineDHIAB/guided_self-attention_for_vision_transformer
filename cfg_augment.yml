@@ -4,18 +4,27 @@ device: cpu #device on which you want to train the data, use cpu if no nvidia cu
 
 run_name: augment
 
-job_type: thesis_final
+job_type: augment
 
 img_dir: ./data/image # directory to image data
 
 mask_dir: ./data/image_mask # directory to image masks
 
-label_dir: ./data/WSI_metadata # directory to image labels
+label_dir: ./data/labels # directory to image labels
 
 pipeline:
     - name: process # process pipe used to prepare the data
-      train_fraction: 0.75 # proportion of the data to be used for training
-      validation_fraction: 0.15 # proportion of the data to be used for validation
+      train_fraction: 1 # proportion of the data to be used for training
+      validation_fraction: 0 # proportion of the data to be used for validation
+      preprocess : 
+        apply: true
+        crop : # crop your data to create square images and augment it using the result, you need to know the minimum height / width
+          apply: true
+          center : random
+          height : 430
+        resize :
+          apply : true
+
       is_augment: true # augmentation will be executed if this is true
     # - name: train # train pipe used to training the model
     #   train_cfg:
