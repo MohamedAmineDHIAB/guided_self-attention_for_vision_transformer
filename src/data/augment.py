@@ -82,8 +82,6 @@ def augment(
         transformations = [
                 A.Compose([
                 ]),A.Compose([
-                        A.RandomCrop(height=224, width=224,p=1),
-                ]),A.Compose([
                         A.HorizontalFlip(p=1),
                 ]),A.Compose([
                         A.CLAHE(p=1),

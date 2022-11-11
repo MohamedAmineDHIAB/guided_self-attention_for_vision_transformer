@@ -7,5 +7,6 @@ wandb
 /data/raw/image/*
 /data/raw/image_mask/*
 /data/raw/labels/*
+.ipynb_checkpoints
 *.zip
 /reports/figures/*.jpg

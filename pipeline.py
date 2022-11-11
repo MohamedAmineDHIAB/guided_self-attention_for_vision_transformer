@@ -70,6 +70,11 @@ def parse_arguments():
     CONFIG_FILE=args.cfg
 
 def process_pipe(idx,train_fraction,validation_fraction,is_augment,preprocess_cfg):
+    global IMG_DIR
+    global MASK_DIR
+    global LABEL_DIR
+    global DATA_DIR
+    global RANDOM_SEED
     # taking the main directory containing the images, example: /data/raw
     DATA_DIR=os.path.dirname(IMG_DIR)
     # Making the data
@@ -81,35 +86,36 @@ def process_pipe(idx,train_fraction,validation_fraction,is_augment,preprocess_cf
     MASK_TO_AUGMENT_DIR=MASK_DIR
     if preprocess_cfg:
         preprocess(preprocess_cfg,IMG_DIR,MASK_DIR,main_df,train_fraction,validation_fraction,RANDOM_SEED)
-        # defining the directory for the preprocessed images to be augmented 
-        IMG_TO_AUGMENT_DIR=os.path.join(DATA_DIR,'../preprocessed/image')
-        # normalizing the directory path
-        IMG_TO_AUGMENT_DIR=os.path.normpath(IMG_TO_AUGMENT_DIR)
-        # defining the directory for the preprocessed masks to be augmented 
-        MASK_TO_AUGMENT_DIR=os.path.join(DATA_DIR,'../preprocessed/image_mask')
-        # normalizing the directory path
-        MASK_TO_AUGMENT_DIR=os.path.normpath(MASK_TO_AUGMENT_DIR)
-        print(preprocess_cfg)
-    else :
-        # Creating train, val and test dataframes without preprocessing
-        train_df=main_df.sample(frac=train_fraction,random_state=RANDOM_SEED)
-        if train_fraction < 1:
-            val_df=pd.concat([main_df, train_df]).drop_duplicates(keep=False).sample(frac=validation_fraction/(1-train_fraction),random_state=RANDOM_SEED)
-            test_df=pd.concat([main_df, train_df,val_df]).drop_duplicates(keep=False)
-        else :
-            val_df=pd.DataFrame([],columns=train_df.columns)
-            test_df=pd.DataFrame([],columns=train_df.columns)
+        # Changing the DATA directory to preprocessed folder
+        DATA_DIR=os.path.join(DATA_DIR,'../preprocessed')
+        ## normalizing the data directory
+        DATA_DIR=os.path.normpath(DATA_DIR)
+        # Changing the IMG, MASK and LABEL directories accordingly
+        IMG_DIR=os.path.join(DATA_DIR,'image')
+        MASK_DIR=os.path.join(DATA_DIR,'image_mask')
+        LABEL_DIR=os.path.join(DATA_DIR,'labels')
+        # Changing the main dataframe data.tsv accordingly
+        main_df=create_table( LABEL_DIR,IMG_DIR,MASK_DIR)
 
-        # Saving dataframes
-        train_df.to_csv(DATA_DIR+'/train.tsv',index=False)
-        val_df.to_csv(DATA_DIR+'/val.tsv',index=False)
-        test_df.to_csv(DATA_DIR+'/test.tsv',index=False)
-    exit()
+        print(len(main_df))
+    # Creating train, val and test dataframes without preprocessing
+    train_df=main_df.sample(frac=train_fraction,random_state=RANDOM_SEED)
+    if train_fraction < 1:
+        val_df=pd.concat([main_df, train_df]).drop_duplicates(keep=False).sample(frac=validation_fraction/(1-train_fraction),random_state=RANDOM_SEED)
+        test_df=pd.concat([main_df, train_df,val_df]).drop_duplicates(keep=False)
+    else :
+        val_df=pd.DataFrame([],columns=train_df.columns)
+        test_df=pd.DataFrame([],columns=train_df.columns)
+
+    # Saving dataframes
+    train_df.to_csv(DATA_DIR+'/train.tsv',index=False)
+    val_df.to_csv(DATA_DIR+'/val.tsv',index=False)
+    test_df.to_csv(DATA_DIR+'/test.tsv',index=False)
 
     if is_augment :
-        augment(IMG_TO_AUGMENT_DIR,
-                MASK_TO_AUGMENT_DIR,
-                os.path.dirname(IMG_TO_AUGMENT_DIR)+'/train.tsv')
+        augment(IMG_DIR,
+                MASK_DIR,
+                os.path.dirname(IMG_DIR)+'/train.tsv')
 
         train_df_aug=create_table( os.path.join(DATA_DIR, '../augmented/labels'),
                      os.path.join(DATA_DIR, '../augmented/image'),
@@ -124,6 +130,13 @@ def process_pipe(idx,train_fraction,validation_fraction,is_augment,preprocess_cf
     return()
 
 def train_pipe(idx,train_cfg):
+    global MASK_DIR
+    global IMG_DIR
+    global MODEL_CFG
+    global MULTI_GPUS
+    global DEVICE
+    global WITH_WANDB
+    global PIPELINE_LEN
     # image size to be used for training
     img_size=ast.literal_eval(train_cfg['img_size'])
     # check if augmentation is available
@@ -220,7 +233,7 @@ def test_pipe(idx,test_cfg,test_data_path):
     return()
 
 def browse_pipeline():
-
+    global PIPELINE
     # Execute pipes
     for i,pipe in enumerate(PIPELINE):
                 if pipe['name']=='process':

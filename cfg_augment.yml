@@ -21,25 +21,25 @@ pipeline:
           type : all # cut the whole image into smaller cropped images of size (height x width)
           height : 430
           width : 430
-      is_augment: true # augmentation will be executed if this is true
-    # - name: train # train pipe used to training the model
-    #   train_cfg:
-    #       with_augmentation: true # if set to true, data in the '.../augmented' folder will be used for training
-    #       img_size: (512,512)
-    #       epochs: 10
-    #       batch_size: 8
-    #       learning_rate: 0.0003
-    #       lr_decay: 0.1
-    #       lamda: 1
-    #       optimizer: adam
-    #       attention_threshold: 0.1
-    #       save_path: ./weights/model_densenet_1.pth
-    # - name: test # test pipe used to run inference
-    #   test_data: ./data/test.tsv
-    #   test_cfg:
-    #       img_size: (512,512)
-    #       batch_size: 2
-    #       weights: ./weights/model_densenet_1.pth
+      is_augment: false # augmentation will be executed if this is true
+    - name: train # train pipe used to training the model
+      train_cfg:
+          with_augmentation: true # if set to true, data in the '.../augmented' folder will be used for training
+          img_size: (512,512)
+          epochs: 10
+          batch_size: 8
+          learning_rate: 0.0003
+          lr_decay: 0.1
+          lamda: 1
+          optimizer: adam
+          attention_threshold: 0.1
+          save_path: ./weights/model_densenet_1.pth
+    - name: test # test pipe used to run inference
+      test_data: ./data/test.tsv
+      test_cfg:
+          img_size: (512,512)
+          batch_size: 2
+          weights: ./weights/model_densenet_1.pth
 
 with_wandb: false
 
