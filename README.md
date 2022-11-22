@@ -1,6 +1,6 @@
 ## Guided Soft Attention & Self-Attention for DenseNet & Vision Transformer :robot:
 
-This repository contains the code for the paper `Clinically Guided Soft Attention for AI-Assistance in Histopathology` :books:
+This repository contains the code for the thesis `Clinically Guided Soft Attention for AI-Assistance in Histopathology` :books:
 
 The paper that inspired this work is [`Guided Soft Attention Network for Classification of Breast Cancer Histopathology Images`](https://ieeexplore.ieee.org/abstract/document/8873545) :scroll:
 
